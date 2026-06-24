@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Forever Be Mine? ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 50%, #ffbe94 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #4a4a4a;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* --- FLOATING HEARTS --- */
+        .heart {
+            position: absolute;
+            pointer-events: none;
+            bottom: -50px;
+            animation: floatUp 5s linear infinite;
+            z-index: 0;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); 
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.9;
+            }
+            90% {
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(-115vh) scale(1.6) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 420px;
+            border-radius: 30px;
+            padding: 40px 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #ff5e7e;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .from-tag {
+            font-weight: 600;
+            color: #ff5e7e;
+            margin-bottom: 5px;
+            display: block;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            color: #ff4766;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .proposal-text {
+            font-size: 1.05rem;
+            margin: 20px 0;
+            line-height: 1.6;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Buttons Container */
+        .action-space {
+            position: relative;
+            margin-top: 25px;
+            min-height: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-yes {
+            background: #ffffff;
+            color: #ff4766;
+            border: 2px solid #ff4766;
+            padding: 12px 50px;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 71, 102, 0.2);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s, color 0.3s;
+            z-index: 10;
+        }
+
+        .btn-yes:hover {
+            background: #ff4766;
+            color: white;
+        }
+
+        .btn-no {
+            background: #e0e0e0;
+            color: #666;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.25s ease;
+            z-index: 5;
+        }
+
+        /* Success Screen Cat Container */
+        .cat-container {
+            width: 100%;
+            max-width: 240px;
+            height: 240px;
+            margin: 20px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(255, 117, 140, 0.25);
+            background: #fff0f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cat-gif {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn-primary {
+            width: 100%;
+            background: linear-gradient(90deg, #ff758c, #ff7eb3);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 117, 140, 0.4);
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div id="step-proposal">
+            <span class="badge">💖 Special Proposal</span>
+            <span class="from-tag">From: Rehan ❤️</span>
+            <h2>Will you forever be mine?<br><span style="color: #ff758c;">Saima Fatima</span> 💖</h2>
+            
+            <p class="proposal-text">I love you and only you my lifeline. Please don't dare to clik No 🥺</p>
+            
+            <div class="action-space">
+                <button class="btn-yes" id="btn-yes" onclick="sayYes()">Yes ❤️</button>
+                <button class="btn-no" id="btn-no" onclick="handleNoClick()">No 🥹</button>
+            </div>
+        </div>
+
+        <div id="step-success" class="hidden">
+            <span class="badge">🎉 Proposal Accepted!</span>
+            <h2>Yay! I knew you'd say YES! 💖</h2>
+            <p style="margin-top: 8px; color: #666; font-size: 0.95rem;">You're the most amazing person I know. I love you endlessly.</p>
+            <p style="font-weight: 600; color: #ff5e7e; margin-top: 3px;">— Rehan</p>
+            
+            <div class="cat-container">
+                <img src="https://media.tenor.com/y265JZ_mSmIAAAAi/cat-cute.gif" 
+                     alt="Cute Cat" 
+                     class="cat-gif">
+            </div>
+            
+            <button class="btn-primary" onclick="alert('Sending endless love your way! 💕')">Celebrate Together ✨</button>
+        </div>
+
+    </div>
+
+    <script>
+        // Floating Hearts Generator
+        function generateHearts() {
+            const heartColors = ['#ffffff', '#fff0f2', '#ff4766', '#ffb3c1'];
+            const heartSymbols = ['❤️', '💖', '💝', '💕', '💗'];
+            
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerText = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+            
+            heart.style.color = heartColors[Math.floor(Math.random() * heartColors.length)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 4 + 's';
+            heart.style.fontSize = Math.random() * 15 + 20 + 'px';
+            
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+        setInterval(generateHearts, 350);
+
+        // Button Mechanics
+        let noCount = 0;
+        let yesScale = 1;
+
+        function handleNoClick() {
+            noCount++;
+            const yesBtn = document.getElementById('btn-yes');
+            const noBtn = document.getElementById('btn-no');
+
+            // 4th click par NO gayab aur YES bada ho jayega
+            if (noCount >= 4) {
+                noBtn.style.display = 'none';
+                yesScale += 0.7;
+                yesBtn.style.transform = `scale(${yesScale})`;
+                return;
+            }
+
+            // Yes grow hoga, No side me htega (Koi text/tooltip nahi aayega ab)
+            yesScale += 0.35; 
+            yesBtn.style.transform = `scale(${yesScale})`;
+
+            const randomX = (Math.random() - 0.5) * 220; 
+            const randomY = (Math.random() - 0.5) * 80; 
+            noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        }
+
+        function sayYes() {
+            document.getElementById('step-proposal').classList.add('hidden');
+            document.getElementById('step-success').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
